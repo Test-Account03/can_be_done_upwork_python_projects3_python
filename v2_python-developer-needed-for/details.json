@@ -1,0 +1,12 @@
+{
+    "url": "https://www.upwork.com/jobs/Python-Developer-Needed-for-Gmail-Email-Alert-Automation-Background-Service-Deployment_~021979995003997558654/?referrer_url_path=/nx/search/jobs/",
+    "專案名稱": "Python Developer Needed for Gmail Email Alert Automation (Background Service Deployment)",
+    "專案描述": "Project Overview I need a developer to build a background email monitoring system that: Monitors a Gmail inbox. Checks every 2 hours for multiple emails with the same subject. Sends an alert email when 4 or more emails with the same subject are found within that time window. The solution must run automatically in the background on a Windows laptop (without requiring the user to manually start it).",
+    "地點": "Location\nPakistan",
+    "額外資訊": "Fixed price\nIntermediate\nEst. budget:\n$100.00",
+    "類別": "python",
+    "ai_initail_anylizer": {
+        "ai_position_title": "AI 客戶需求解析師",
+        "response": "```markdown\n### 需求摘要\n\n客戶需要一個能在 Windows 背景自動運行的 Python 程式。該程式需每兩小時監控一個指定的 Gmail 信箱，並在發現有 4 封或以上相同主旨的郵件時，自動發送一封警示郵件。\n\n### 初步功能點\n\n- **Gmail API 認證**：建立安全的 OAuth 2.0 認證流程，讓程式能存取指定的 Gmail 帳戶。\n- **郵件讀取模組**：開發功能以讀取過去兩小時內收到的郵件。\n- **郵件篩選與計數**：分析讀取到的郵件，依據「完全相同的主旨」進行分組與計數。\n- **觸發條件判斷**：實作邏輯，檢查是否有任何一組相同主旨的郵件數量大於或等於 4。\n- **警示郵件發送**：當觸發條件滿足時，使用同一個 Gmail 帳號發送一封警示郵件。\n- **排程執行**：設定一個每兩小時觸發一次的自動化排程機制。\n- **背景服務部署**：將 Python 腳本設定為在 Windows 開機時自動啟動並在背景持續運行的任務。\n\n### 技術關鍵詞\n\n- **語言**: Python\n- **Google API**: `google-api-python-client`, `google-auth-oauthlib`, `Gmail API`\n- **認證**: `OAuth 2.0`, `credentials.json`\n- **排程與部署**: `Windows Task Scheduler` (作業系統原生功能，零成本), `pyinstaller` (打包成 .exe 執行檔)\n- **標準函式庫**: `datetime` (處理時間區間), `time` (控制執行間隔), `smtplib` (備用郵件發送方案)\n\n### 待釐清問題列表\n\n1.  **警示郵件細節**：警示郵件應發送到哪個信箱？郵件的主旨和內容應該是什麼格式（例如：是否要包含觸發警示的郵件主旨和數量）？\n2.  **監控範圍**：程式應該只監控「收件匣 (Inbox)」嗎？還是包含其他資料夾？是否只計算「未讀」郵件，還是所有在時間範圍內收到的郵件？\n3.  **狀態管理**：針對已觸發過警示的郵件，是否需要做特殊標記（例如：加上特定標籤）以避免在下一個檢查週期被重複計算？\n4.  **觸發時間窗口**：需求的「每 2 小時」是指「從檢查當下回推 2 小時」（滑動窗口），還是指固定的時間區塊（例如 12:00-02:00, 02:00-04:00）？\n5.  **錯誤處理**：如果程式因網路問題或 API 限制而無法連接 Gmail，應該如何處理？是默默失敗等待下一次執行，還是要發送另一種錯誤通知？\n6.  **憑證設定**：客戶是否能自行依據教學文件設定 Google Cloud Platform 專案並取得 API 憑證檔 (`credentials.json`)？\n```"
+    }
+}
