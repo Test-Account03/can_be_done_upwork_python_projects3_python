@@ -1,0 +1,12 @@
+{
+    "url": "https://www.upwork.com/jobs/Python-Developer-Needed-for-Gmail-Email-Alert-Automation-Background-Service-Deployment_~021979995003997558654/?referrer_url_path=/nx/search/jobs/",
+    "專案名稱": "Python Developer Needed for Gmail Email Alert Automation (Background Service Deployment)",
+    "專案描述": "Project Overview I need a developer to build a background email monitoring system that: Monitors a Gmail inbox. Checks every 2 hours for multiple emails with the same subject. Sends an alert email when 4 or more emails with the same subject are found within that time window. The solution must run automatically in the background on a Windows laptop (without requiring the user to manually start it).",
+    "地點": "Location\nPakistan",
+    "額外資訊": "Fixed price\nIntermediate\nEst. budget:\n$100.00",
+    "類別": "python",
+    "ai_initail_anylizer": {
+        "ai_position_title": "AI 客戶需求解析師",
+        "response": "```markdown\n### 需求摘要\n\n客戶需要一個在 Windows 筆電背景自動運行的 Python 腳本。此腳本需每兩小時監控一個指定的 Gmail 信箱，當偵測到在時間範圍內有 4 封或更多相同主旨的郵件時，自動發送一封警示郵件。\n\n### 初步功能點\n\n- **Gmail API 認證**：建立安全的 OAuth 2.0 授權機制，讓腳本能存取使用者的 Gmail 帳戶。\n- **郵件讀取模組**：開發定時（每 2 小時）觸發的功能，抓取指定時間範圍內的郵件。\n- **郵件解析與計數**：從每封郵件中提取主旨，並對相同主旨的郵件進行分組與計數。\n- **條件觸發邏輯**：實現核心判斷邏輯，檢查是否有任何主旨的郵件數量達到或超過 4 封。\n- **警示郵件發送**：當條件滿足時，使用 Gmail API 或 SMTP 協議發送一封客製化的警示郵件。\n- **Windows 背景服務化**：將 Python 腳本打包或配置成 Windows 上的背景服務或排程任務，確保在用戶無須手動啟動的情況下自動運行。\n- **簡易配置管理**：提供一個簡單的配置文件（如 .env 或 config.ini），讓用戶可以自行修改監控的信箱、警示接收者、時間間隔與郵件數量門檻。\n\n### 技術關鍵詞\n\n- **程式語言**: Python\n- **關鍵函式庫**: `google-api-python-client`, `google-auth-oauthlib`, `schedule`, `pyinstaller`\n- **API**: Gmail API\n- **技術概念**: OAuth 2.0, Background Service, Windows Task Scheduler, API Polling, Configuration File\n\n### 待釐清問題列表\n\n1.  **警示郵件的細節**：警示郵件的收件人是誰（監控的信箱本身還是其他信箱）？郵件的主旨和內文需要包含哪些資訊（例如：觸發警示的郵件主旨、具體的郵件數量）？\n2.  **監控範圍定義**：監控的範圍是整個收件匣，還是需要排除特定標籤（如：垃圾郵件、已封存）？是否只應計算「未讀」郵件？\n3.  **主旨比對的精確度**：「相同主旨」是否需要區分大小寫？對於像 `Re:` 或 `Fwd:` 這類前綴，是否應將其視為相同主旨處理？\n4.  **重複警示的處理**：如果在下一個 2 小時的檢查週期中，相同的主旨再次滿足條件，是否需要再次發送警示？還是說，在特定時間內針對同一事件只發送一次警示？\n5.  **環境設定與交付**：客戶是否能自行操作在 Google Cloud Platform 上設定並獲取 Gmail API 所需的憑證檔案（`credentials.json`）？交付物是原始碼，還是包含完整安裝說明的可執行檔（`.exe`）？\n6.  **錯誤處理機制**：如果腳本因網路問題或 API 權限失效而無法連接 Gmail，應如何處理？是否需要記錄日誌檔或發送錯誤通知？\n```"
+    }
+}
