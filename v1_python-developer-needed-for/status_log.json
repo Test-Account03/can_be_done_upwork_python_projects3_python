@@ -1,0 +1,9 @@
+[
+  {
+    "status": "READY",
+    "url": "https://v1python-developer-needed-4m2v1kqci-tests-projects-8efd9a3b.vercel.app",
+    "console_url": "https://vercel.com/tests-projects-8efd9a3b/v1_python-developer-needed-for/62MJJUogxWWUABWTyg2GS44PftHy/logs?timeline=maximum&levels=error",
+    "runtime_msg": "Vercel Function\n09:35:23.856\nTraceback (most recent call last):\nFile \"/var/task/vc__handler__python.py\", line 38, in <module>\n__vc_spec.loader.exec_module(__vc_module)\nFile \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\nFile \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\nFile \"/var/task/app.py\", line 4, in <module>\nfrom api.scraper.core import setup_google_sheets_client, collect_and_prepare_data, append_data_to_sheet\nModuleNotFoundError: No module named 'api'\nPython process exited with exit status: 1. The logs above can help with debugging the issue.",
+    "time": "2025-11-03 17:36:53"
+  }
+]
