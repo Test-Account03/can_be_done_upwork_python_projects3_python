@@ -1,0 +1,12 @@
+{
+    "url": "https://www.upwork.com/jobs/Python-Developer-Needed-for-TSA-Wait-Times-Scraper_~021979639483207829872/?referrer_url_path=/nx/search/jobs/",
+    "專案名稱": "Python Developer Needed for TSA Wait Times Scraper",
+    "專案描述": "We are seeking an experienced Python developer to create a web scraper that retrieves TSA/security checkpoint wait times for JFK, LGA, and EWR airports and stores the data in a database. The ideal candidate should have experience in web scraping and data storage solutions.",
+    "地點": "Location\nUnited States",
+    "額外資訊": "Fixed price\nIntermediate\nEst. budget:\n$150.00",
+    "類別": "python",
+    "ai_initail_anylizer": {
+        "ai_position_title": "AI 客戶需求解析師",
+        "response": "```markdown\n# 初步分析報告：TSA 等待時間爬蟲\n\n### 需求摘要\n\n客戶需要一個 Python 爬蟲程式，用於自動抓取美國 JFK、LGA、EWR 三個機場的 TSA 安檢等待時間，並將所收集的數據儲存到一個資料庫中，以建立一個持續更新的數據集。\n\n### 初步功能點\n\n-   **數據源研究**：調查並確定一個或多個提供 TSA 等待時間的穩定、可爬取的目標網站。\n-   **核心爬蟲開發**：開發 Python 腳本，使用 `Requests` 和 `BeautifulSoup` 等函式庫來抓取目標網站的 HTML 內容。\n-   **數據提取與解析**：從 HTML 中精準提取各機場、航廈、安檢口的等待時間數據。\n-   **數據結構化**：將抓取到的非結構化數據，整理成一致的格式（例如：機場代碼、航廈、安檢點名稱、等待時間、抓取時間戳）。\n-   **數據庫整合 (零成本方案)**：設定並整合 Google Sheets 作為資料庫，開發將結構化數據寫入新的一列的功能。\n-   **錯誤處理機制**：加入基本的錯誤處理邏輯，例如處理網路連線失敗、網站結構變更導致的數據抓取失敗等情況，並記錄日誌。\n-   **自動化排程**：利用 GitHub Actions 建立一個排程任務，實現無需本地伺服器即可定時（例如每小時）自動執行爬蟲腳本。\n-   **交付文件撰寫**：建立一份 `README.md` 文件，詳細說明專案的安裝步驟、環境設定、如何執行腳本，以及 Google Sheets API 的金鑰設定方法。\n\n### 技術關鍵詞\n\n-   **語言**: Python 3\n-   **核心函式庫**: `Requests` (用於發送 HTTP 請求), `BeautifulSoup4` (用於解析 HTML), `gspread` (用於操作 Google Sheets)\n-   **數據儲存**: Google Sheets, SQLite (本地備用方案), CSV\n-   **環境管理**: `venv`, `requirements.txt`\n-   **自動化**: GitHub Actions (用於雲端定時任務), Cron (本地定時任務)\n-   **技術概念**: Web Scraping, DOM Parsing, Data Persistence, API Authentication (Google OAuth2), Scheduled Jobs\n\n### 待釐清問題列表\n\n1.  **數據來源**：是否有指定的目標網站來抓取等待時間？如果沒有，是否需要由我來尋找並評估最可靠的數據來源？\n2.  **數據精確度**：需要抓取哪些具體的數據欄位？除了機場和等待時間，是否還需要包含航廈、具體安檢口名稱、數據更新時間等資訊？\n3.  **抓取頻率**：期望此爬蟲多久執行一次？（例如：每 15 分鐘、每小時、每天一次？）這會影響排程設定與潛在的網站封鎖風險。\n4.  **資料庫偏好**：使用 Google Sheets 作為免費資料庫是否可行？或者您有其他偏好的資料庫類型（前提是符合低成本原則）？\n5.  **交付方式**：最終交付物需要包含什麼？是僅交付 Python 原始碼和說明文件，還是需要協助將整個自動化流程部署到 GitHub Actions 上？\n6.  **錯誤處理預期**：當網站改版或無法抓取到數據時，程式應如何反應？是僅記錄錯誤日誌，還是需要透過某種方式（如 Email）發出通知？\n\n```"
+    }
+}
